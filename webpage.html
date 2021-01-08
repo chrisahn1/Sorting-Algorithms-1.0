@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <style>
+      ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+  cursor: pointer;
+  }
+
+
+.navbar a:hover, .dropdown:hover .dropbtn{
+  background-color: red;
+}
+
+
+
+.slidecontainer {
+  width: 50%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 15px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+
+</style>
+
+
+    <body>
+      <ul>
+        <li><a onclick="generate()">Generate</a></li>
+        <li><a onclick="BubbleSort()">Bubble Sort</a></li>
+        <li><a onclick="QuickSortStart()">Quick Sort</a></li>
+        <li><a onclick="HeapSort()">Heap Sort</a></li>
+      </ul>
+      <div class="slidecontainer">
+        <p><input type="range" min="100" max="300" value="200" class="slider" id="sizeRange">Size: <span id="sizeR"></span>
+          <input type="range" min="1" max="9" value="5" class="slider" id="speedRange">Speed: <span id="speedR"></span></p>
+      </div>
+      <canvas id= "myCanvas" width="1240" height="450" style="position:relative; left:5px; top:0px; border:1px solid #000000;"></canvas>
+      <script type="text/javascript" src="script.js"></script>
+    </body>
+
+
+</html>
